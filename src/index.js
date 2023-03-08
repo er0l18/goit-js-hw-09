@@ -1,7 +1,7 @@
 //import ('./css/styles.css'); //added to index.html
 import { fetchCountries } from './fetchCountries.js';
 
-const DEBOUNCE_DELAY = 300;
+const DEBOUNCE_DELAY = 500;//better than 300
 
 const searchBox = document.querySelector("#search-box");
 const countryList = document.querySelector("ul.country-list");
@@ -20,10 +20,10 @@ searchBox.addEventListener("keyup", async () => {
         } catch (error) {
         console.log(error.message);
         }
-    } else {
-      console.log("Input error!");
-      countryList.innerHTML = "";
-    }
+      } else {
+        console.log("Input error!");
+        countryList.innerHTML = "";
+      }
   }
 });
 
